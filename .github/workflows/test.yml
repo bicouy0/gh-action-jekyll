@@ -29,6 +29,8 @@ jobs:
 
       - run: bundle exec jekyll -v
 
+      - run: ls -lA /opt/hostedtoolcache/Ruby/2.6.6/x64/bin
+
 #      - run: gem update --system
 #      - run: tree $GITHUB_WORKSPACE/vendor/bundle/ruby/
 #      - run: echo "$GITHUB_WORKSPACE/vendor/bundle/ruby/2.6.0/bin" >> $GITHUB_PATH
