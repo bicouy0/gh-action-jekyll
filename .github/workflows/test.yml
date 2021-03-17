@@ -20,7 +20,7 @@ jobs:
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 2.7
+          ruby-version: 2.6
           bundler-cache: true
 
       - run: gem update --system
@@ -28,10 +28,10 @@ jobs:
       - run: tree $GITHUB_WORKSPACE/vendor/bundle/ruby/
 
       - name: Add bundle to PATH
-        run: echo "$GITHUB_WORKSPACE/vendor/bundle/ruby/2.7.0/bin" >> $GITHUB_PATH
+        run: echo "$GITHUB_WORKSPACE/vendor/bundle/ruby/2.6.0/bin" >> $GITHUB_PATH
 
       - run: echo $PATH
 
-      - run: cat "$GITHUB_WORKSPACE/vendor/bundle/ruby/2.7.0/bin/jekyll"
+      - run: cat "$GITHUB_WORKSPACE/vendor/bundle/ruby/2.6.0/bin/jekyll"
 
       - run: jekyll -v
