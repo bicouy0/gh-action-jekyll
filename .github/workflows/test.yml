@@ -26,7 +26,7 @@ jobs:
       - run: echo $HOME
       - run: bundle binstubs jekyll --path=$HOME/.local/bin
 
-      -run : cat $HOME/.local/bin/jekyll
+      - run : cat $HOME/.local/bin/jekyll
 
 #      - run: ls -lA /opt/hostedtoolcache/Ruby/2.6.6/x64/bin
 #      - run: gem update --system
