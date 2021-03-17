@@ -23,6 +23,8 @@ jobs:
           ruby-version: 2.6
           bundler-cache: true
 
+      - run: sudo gem update --system
+
       - run: bundle update --bundler
 
       - run: bundle exec jekyll -v
