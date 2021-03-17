@@ -12,7 +12,7 @@ jobs:
   publish:
     runs-on: ubuntu-20.04
     env:
-      BUNDLE_GEMFILE: sub/Gemfile
+      BUNDLE_GEMFILE: $GITHUB_WORKSPACE/sub/Gemfile
     steps:
       - name: Checkout
         uses: actions/checkout@v2
