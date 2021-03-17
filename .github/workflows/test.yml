@@ -23,6 +23,8 @@ jobs:
           ruby-version: 2.7
           bundler-cache: true
 
+      - run: gem update --system
+
       - run: tree $GITHUB_WORKSPACE/vendor/bundle/ruby/
 
       - name: Add bundle to PATH
