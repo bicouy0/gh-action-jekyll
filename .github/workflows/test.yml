@@ -12,7 +12,7 @@ jobs:
   publish:
     runs-on: ubuntu-20.04
     env:
-      BUNDLE_GEMFILE: ${{ GITHUB_WORKSPACE }}/sub/Gemfile
+      BUNDLE_GEMFILE: sub/Gemfile
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -28,3 +28,5 @@ jobs:
       - run: bundle binstubs jekyll --path=$HOME/.local/bin
 
       - run: jekyll -v
+        env:
+          BUNDLE_GEMFILE: ${{ env.GITHUB_WORKSPACE }}/sub/Gemfile
