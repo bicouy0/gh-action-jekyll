@@ -23,4 +23,7 @@ jobs:
           ruby-version: 2.7
           bundler-cache: true
 
-      - run: tree vendor
+      - name: Add bundle to PATH
+        run: echo "$HOME/vendor/bundle/ruby/2.7.0/bin" >> $GITHUB_PATH
+
+      - run: jekyll -v
