@@ -28,5 +28,3 @@ jobs:
       - run: bundle binstubs jekyll --path=$HOME/.local/bin
 
       - run: jekyll -v
-        env:
-          BUNDLE_GEMFILE: ${{ github.workspace }}/sub/Gemfile
