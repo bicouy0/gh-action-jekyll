@@ -39,4 +39,6 @@ jobs:
 
       - run: cat "$GITHUB_WORKSPACE/vendor/bundle/ruby/2.6.0/bin/jekyll"
 
+      - run: $GITHUB_WORKSPACE/vendor/bundle/ruby/2.6.0/bin/jekyll -v
+
       - run: jekyll -v
