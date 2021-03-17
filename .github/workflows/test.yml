@@ -23,9 +23,10 @@ jobs:
           ruby-version: 2.6
           bundler-cache: true
 
-      - run: gem update --system
+      - run: bundle exec jekyll -v
+#      - run: gem update --system
 
-      - run: tree $GITHUB_WORKSPACE/vendor/bundle/ruby/
+#      - run: tree $GITHUB_WORKSPACE/vendor/bundle/ruby/
 
       - name: Add bundle to PATH
         run: echo "$GITHUB_WORKSPACE/vendor/bundle/ruby/2.6.0/bin" >> $GITHUB_PATH
